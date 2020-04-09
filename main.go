@@ -5,34 +5,11 @@ import (
 	"awesomeProject2/suger"
 	"fmt"
 )
-//package main
-//import "fmt"
-//func fibonacci(c, quit chan int) {
-//	x, y := 0, 1
-//	for {
-//		select {
-//		case c <- x:
-//			x, y = y, x+y
-//		case <-quit:
-//			fmt.Println("quit")
-//			return
-//		}
-//	}
-//}
-//func main() {
-//	c := make(chan int)
-//	quit := make(chan int)
-//	//go func() {
-//		for i := 0; i < 10; i++ {
-//			fmt.Println(<-c)
-//		}
-//		quit <- 0
-//	}()
-//	fibonacci(c, quit)
-//}
+
 func main() {
 	//makeSlice()
 	//makeMap()
+
 	//struct_demo.TestForStruct()
 	//dog := new(struct_demo.Dog)
 	//dog.Id = 1
@@ -49,8 +26,10 @@ func main() {
 	////b.Run()
 	//action(b)
 	//action(c)
+
 	//fmt.Printf("cpu num = %d", runtime.NumCPU())
 	//runtime.GOMAXPROCS(runtime.NumCPU() -1)
+
 	//go gorotine.Loop()
 	//go gorotine.Loop()
 	//time.Sleep(time.Second * 5)
@@ -65,16 +44,19 @@ func main() {
 	//gorotine.WG.Wait()
 	//fmt.Println("ALL DONE")
 	//time.Sleep(time.Second * 10)
+
 	//指针
 	//point_demo.TestPoint()
 	//数组指针 指针数组
 	//point_demo.TestPointArr()
+
 	//json序列化
 	//json_demo.SerializeStruct()
 	//json_demo.SerializeMap()
 	//json反序列化
 	//json_demo.DeSerializeStruct()
 	//json_demo.DeSerializeMap()
+
 	//语法糖
 	//suger.Suger("A","B","C")
 	suger.Suger1()
