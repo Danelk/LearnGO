@@ -2,7 +2,7 @@ package main
 
 import (
 	"awesomeProject2/interface_demo"
-	"awesomeProject2/suger"
+	"awesomeProject2/linklist_demo"
 	"fmt"
 )
 
@@ -59,7 +59,14 @@ func main() {
 
 	//语法糖
 	//suger.Suger("A","B","C")
-	suger.Suger1()
+	//suger.Suger1()
+
+	//链表
+	list := new(linklist_demo.ListNode)
+	linklist_demo.CreateNode(list, 10) //创建链表
+	linklist_demo.PrintNode(list)//打印链表
+	rsList := linklist_demo.Reverse(list)//翻转链表
+	linklist_demo.PrintNode(rsList)//打印链表
 }
 
 //测试定义接口实现方法
