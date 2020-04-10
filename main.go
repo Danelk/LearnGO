@@ -62,11 +62,29 @@ func main() {
 	//suger.Suger1()
 
 	//链表
-	list := new(linklist_demo.ListNode)
-	linklist_demo.CreateNode(list, 10) //创建链表
-	linklist_demo.PrintNode(list)//打印链表
-	rsList := linklist_demo.Reverse(list)//翻转链表
-	linklist_demo.PrintNode(rsList)//打印链表
+	//list := new(linklist_demo.ListNode)
+	//linklist_demo.CreateNode(list, 5) //创建链表
+	node1 := new(linklist_demo.DListNode)
+	node2 := new(linklist_demo.DListNode)
+	node3 := new(linklist_demo.DListNode)
+	node4 := new(linklist_demo.DListNode)
+	node1.Value = 1
+	node2.Value = 2
+	node3.Value = 3
+	node4.Value = 4
+	// node1为头节点，前指针为空，后指针指向node2
+	node1.Pre = nil
+	node1.Next = node2
+	node2.Pre = node1
+	node2.Next = node3
+	node3.Pre = node2
+	node3.Next = node4
+	// node4位尾节点，前指针指向node3，后指针为空
+	node4.Pre = node3
+	node4.Next = nil
+	linklist_demo.PrintDNode(node1)//打印链表
+	rsList := linklist_demo.DoubleReverse(node1)//翻转链表
+	linklist_demo.PrintDNode(rsList)//打印链表
 }
 
 //测试定义接口实现方法

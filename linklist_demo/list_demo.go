@@ -7,6 +7,12 @@ type ListNode struct {
 	Next  *ListNode
 }
 
+type DListNode struct {
+	Value interface{}
+	Pre   *DListNode
+	Next  *DListNode
+}
+
 //创建单向链表
 func CreateNode(node *ListNode, max int)  {
 	cur := node
@@ -16,7 +22,6 @@ func CreateNode(node *ListNode, max int)  {
 		cur = cur.Next
 	}
 }
-
 
 //单向链表翻转
 func Reverse(head *ListNode) *ListNode {
@@ -31,11 +36,32 @@ func Reverse(head *ListNode) *ListNode {
 	return pre
 }
 
+//双向链表翻转
+func DoubleReverse(list *DListNode) *DListNode  {
+	var pre, next *DListNode //定义一个节点  值为nil
+	pre, next = nil, nil
+	for list != nil{
+		next = list.Next
+		list.Pre = next
+		list.Next = pre
+		pre = list
+		list = next
+	}
+	return pre
+}
 
 //打印链表
 func PrintNode(node *ListNode)  {
 	for node != nil {
 		fmt.Print(node.Value, "->")
+		node = node.Next
+	}
+	fmt.Println()
+}
+//打印链表
+func PrintDNode(node *DListNode)  {
+	for node != nil {
+		fmt.Println(node, "\t")
 		node = node.Next
 	}
 	fmt.Println()
