@@ -86,7 +86,6 @@ func main() {
 	//linklist_demo.PrintDNode(node1)//打印链表
 	//rsList := linklist_demo.DoubleReverse(node1)//翻转链表
 	//linklist_demo.PrintDNode(rsList)//打印链表
-
 	//切片
 	//sl := []int{1,2,3,4,5,6,7,8,9}
 	//s1 := slice_demo.ExtentSlice(sl,2,6)
